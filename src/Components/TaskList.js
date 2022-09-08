@@ -7,7 +7,6 @@ function TaskList({taskList}) {
 
   return (
     <div>
-      TaskLists component
       {/* Why  render TWO times in a console ???????????????*/}
       {/* {taskList.map((task) => {
         console.log(task);

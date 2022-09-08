@@ -1,5 +1,4 @@
 import React from "react";
-import { AiFillDelete, AiOutlineCheck } from "react-icons/ai";
 
 
 function Task({ task }) {

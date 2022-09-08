@@ -1,11 +1,14 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { FaTrashAlt, BsFillFileCheckFill} from 'react-icons/fa';
+
+
 
 function FetchData() {
   const [taskList, setTasklist] = useState([]);
 
-  let url = "http://localhost:3000/todos";
+  let url = 'http://localhost:8000/todos';
 
   useEffect(() => {
     axios.get(url)
@@ -20,14 +23,17 @@ function FetchData() {
   let arr = taskList.map((list) => {
     return (
       <ul key={list.id}>
-        {list.title}
+        {list.id}. { list.title} <FaTrashAlt /> <FaTrashAlt />
       </ul>
     );
   });
+
+  let numTodos = taskList.length
+
   return (
     <div>
-      FetchData
-      {arr}
+      <h4> {arr} </h4>
+      <h3>Total todos : {numTodos}</h3>
     </div>
   );
 }
