@@ -1,14 +1,8 @@
 import React from "react";
-function Header({ addTaskFunct }) {
+function Header() {
   return (
-    <div>
+    <div className="title">
       <h1>ToDo List</h1>
-      {/* <form>
-        <label>
-          <input type="text" name="name" />
-        </label>
-        <input type="submit" value="Add"  />
-      </form> */}
     </div>
   );
 }

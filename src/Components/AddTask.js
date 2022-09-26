@@ -21,15 +21,15 @@ function AddTask({ addTaskFunct }) {
       <form onSubmit={onSubmit}>
         <div>
           <label />
-          <input
+          <input className= 'input-field'
             type="text"
-            placeholder="Add Task"
+            placeholder="Add a Task"
             value={text}
             onChange={(e) => {
               setText(e.target.value);
             }}
           />
-          <button type="submit">Add</button>
+          <button type="submit" className="buttonAdd">Add</button>
         </div>
       </form>
     </div>

@@ -16,8 +16,6 @@ function App() {
   };
 
   const addTaskFunct = async (task) => {
-    
-
     const res = await fetch(url, {
       method: "POST",
       headers: {
@@ -25,12 +23,24 @@ function App() {
       },
       body: JSON.stringify(task),
     });
-    const data = res.json();
+    const data = await res.json();
 
     setTasks([...tasks, data]);
   };
 
-  const chekTask = () => {};
+
+
+  const chekTask = (id) => {
+
+    const data = tasks.map((task) => {
+      if (task.id === id) {
+        return {...task, completed: !task.completed };
+      }
+      return task;
+    });
+    setTasks(data);
+  };
+  // };
 
   let url = "http://localhost:5000/tasks/";
 
@@ -50,7 +60,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>App Component</h1>
       <Header />
       <br />
       <AddTask addTaskFunct={addTaskFunct} />

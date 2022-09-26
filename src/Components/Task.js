@@ -1,18 +1,21 @@
+import { hover } from "@testing-library/user-event/dist/hover";
 import React from "react";
 import { FaTrashAlt, FaCheck } from "react-icons/fa";
 
 function Task({ task, deleteTask, chekTask }) {
   return (
     <div>
-      <h3>
-        {task.text}
+      <h3 className="task">
+        <span className={task.completed ? "done" : ""}>{task.id}.{task.text}</span>
         <FaCheck
+        className = 'chek'
           type="chekbox"
-          onClick={chekTask}
-          style={{ cursor: "pointer", marginLeft: "10px" }}
+          onClick={() => {
+            chekTask(task.id);
+          }}
         />
         <FaTrashAlt
-          style={{ cursor: "pointer", marginLeft: "5px" }}
+        className = 'trash'
           onClick={() => {
             deleteTask(task.id);
           }}
