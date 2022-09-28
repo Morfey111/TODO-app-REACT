@@ -52,8 +52,8 @@
 .task {
   width: 29vw;
   text-align: center;
-  color: aliceblue;
-  background-color: gray;
+  color: rgb(39, 38, 38);
+  background-color: rgb(154, 154, 154);
   padding: 7px;
   font-size: 3vh;
   margin-left: 34.5%;

@@ -9,6 +9,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   const deleteTask = async (id) => {
+   
     await fetch(`http://localhost:5000/tasks/${id}`, {
       method: "DELETE",
     });
@@ -46,6 +47,7 @@ function App() {
 
   useEffect(() => {
     const getTasks = async () => {
+      
       const tasksFromServer = await fetchTasks();
       setTasks(tasksFromServer);
     };

@@ -21,7 +21,7 @@ function AddTask({ addTaskFunct }) {
       <form onSubmit={onSubmit}>
         <div>
           <label />
-          <input className= 'input-field'
+          <input className='input-field'
             type="text"
             placeholder="Add a Task"
             value={text}

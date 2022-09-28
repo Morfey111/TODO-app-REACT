@@ -1,5 +1,7 @@
 1. npm start
-2. npx json-server --watch ./data.json --port 8000
+2. npm run server  OR  npx json-server --watch ./data.json --port 5000 
+3 npm install react-icons --save
+
 
 
 # Getting Started with Create React App
